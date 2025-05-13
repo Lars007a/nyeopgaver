@@ -1,0 +1,11 @@
+.primaryBtn {
+  font-family: "Zen Loop", cursive;
+  display: inline-block;
+  padding: 24px 74px;
+  font-size: 48px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

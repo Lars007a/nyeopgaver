@@ -1,0 +1,35 @@
+footer {
+  background-color: rgba(42, 79, 87, 1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 180px 80px 180px;
+}
+.icon {
+  font-size: 80px;
+  cursor: pointer;
+}
+.footerInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footerInfo img {
+  width: 50px;
+}
+
+.footerInfo p {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+}

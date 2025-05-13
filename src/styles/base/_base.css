@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Zen+Loop:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ced3cd;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 1em 2em;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 16px;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  color: white;
+}

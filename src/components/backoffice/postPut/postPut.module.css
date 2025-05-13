@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.form {
+  max-width: 37.5rem;
+  width: 100%;
+
+  & h1 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 700;
+  }
+
+  & .submit {
+    width: 100%;
+    height: 2rem;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    & label {
+      width: 100%;
+      text-align: start;
+      color: #000;
+    }
+
+    & input {
+      margin-bottom: 2rem;
+      width: 100%;
+      height: 2rem;
+      padding: 0.125rem;
+    }
+  }
+}

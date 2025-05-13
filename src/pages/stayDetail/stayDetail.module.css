@@ -1,0 +1,30 @@
+.stayDetail {
+  background-color: #33626c;
+  padding: 0 20px;
+  transform: translateY(-50px);
+  border-top-left-radius: 50px;
+}
+
+.stayDetail h2 {
+  padding: 60px 0 30px 0;
+}
+
+.stayDetail p {
+  margin-bottom: 70px;
+}
+
+.stayDetail p:nth-of-type(3) {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.stayDetailBtn {
+  margin-bottom: 34px;
+  background-color: #829b97;
+  border: none;
+}
+
+.stayDetailBtn:hover {
+  background-color: #758b88;
+  transition: all 250ms ease-in-out;
+}

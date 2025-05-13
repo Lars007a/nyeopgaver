@@ -1,0 +1,44 @@
+.infobox {
+  border-radius: 50px 0px 50px 0px;
+  background-color: rgba(51, 98, 108, 1);
+
+  padding: 60px 0px;
+  transform: translateY(-50px);
+
+  .infoContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  img {
+    border-radius: 060504px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn {
+    background-color: rgba(130, 155, 151, 1);
+    border: 1px solid transparent;
+    transition: background-color 0.2s, border 0.2s;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+@media (max-width: 700px) {
+  .infobox .btn {
+    font-size: 28px;
+    width: 100%;
+    padding: 18px 0px;
+  }
+}

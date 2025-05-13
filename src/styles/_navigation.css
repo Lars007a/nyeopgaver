@@ -1,0 +1,249 @@
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  background-color: #d9d9d9;
+  border-bottom: 1px solid #e0e0e0;
+
+  img {
+    width: 200px;
+    margin-left: 15px;
+  }
+}
+
+.burger-menu {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #f8601a;
+  margin-right: 15px;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 200;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+
+  &.open {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem;
+    text-align: center;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      transition: color 300ms;
+
+      &:hover {
+        color: #f8601a;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f8601a;
+        transform-origin: bottom right;
+        transition: transform 300ms ease-out;
+      }
+
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    .active {
+      color: #f8601a;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+
+    li {
+      padding: 0;
+      margin: 0 1rem;
+
+      a {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+ */
+
+/* hele navigationen, alt sammen i navigationen. */
+.navsec {
+  position: fixed; /* skal have, så at man kan se header baggrunden. */
+  width: 100vw;
+  z-index: 98;
+
+  /* container. */
+  .navwrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* indholdet i hele naven, alt sammen. */
+.navcontent {
+  /* hele den her skal puttes ind i en container. */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+
+  padding: 12px 0px;
+
+  /* logo */
+  .navimg {
+    background-image: url("/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    height: 50px;
+    width: 50px;
+  }
+
+  /* hamburger ikon baggrund. */
+  .hamburgerMenu {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px 0px 20px 0px;
+    background-color: #829b97;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+
+  /* hamburger ikon */
+  .hamburgerMenu svg {
+    height: 30px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .hamburgerMenu:hover:has(:not(.closeHamburgerMenu)) {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hamburgerMenu svg:hover {
+    color: #ccc;
+  }
+
+  .closeHamburgerMenu {
+    height: 30px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    z-index: 100; /* så at den bliver vist over alt det andet med position: fixed. På samme sted, som den normalt bare er, bliver den vist. */
+    transition: color 0.2s;
+  }
+
+  .closeHamburgerMenu:hover {
+    color: #ccc;
+  }
+}
+
+.navcontent:has(:not(.navimglink)) {
+  justify-content: flex-end;
+}
+
+.navcontent:has(.navimglink) {
+  justify-content: space-between;
+}
+
+/* navbar der er kørt ud. */
+.navsec {
+  .navbar {
+    background-color: #829b97;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    font-size: 24px;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    transition: color 0.2s;
+    font-family: "Zen Loop", cursive;
+    font-size: 36px;
+  }
+
+  .navbar ul li a:hover {
+    color: #ccc;
+  }
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 700px) {
+  .navsec .navwrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .navsec .navwrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

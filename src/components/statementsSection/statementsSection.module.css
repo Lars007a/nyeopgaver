@@ -1,0 +1,35 @@
+.udtlContainer {
+  background-color: transparent;
+  padding: 10px 0px 60px 0px; /* fordi den er flyttet 50px op, den ovenover, så derfor 10px i top i padding. */
+  width: 80%;
+  margin: 0 auto;
+
+  .msg h3 {
+    padding-top: 10px;
+    color: rgba(42, 79, 87, 1);
+  }
+
+  .udtlTitle {
+    border-radius: 50px 0px 50px 0px;
+    background-color: rgba(197, 180, 150, 1);
+    padding: 20px 0px;
+    font-weight: 300;
+    font-family: "Zen Loop", cursive;
+  }
+
+  .output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .udtlContainer .output {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

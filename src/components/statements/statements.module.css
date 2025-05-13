@@ -1,0 +1,35 @@
+.udtl {
+  width: 100%;
+  padding: 20px 0px;
+  background-color: rgba(130, 155, 151, 1);
+  border-radius: 50px 0px 50px 0px;
+  h4 {
+    color: white;
+    font-size: 34px;
+    font-weight: 400;
+    font-family: "Zen Loop", cursive;
+    margin: 2px 0px;
+  }
+
+  .title {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .con {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+  .con p {
+    font-weight: 300;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    font-size: 16px;
+  }
+}
