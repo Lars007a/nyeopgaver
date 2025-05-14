@@ -1,4 +1,5 @@
 import styles from "./PostPut.module.css";
+import { toast } from "react-toastify";
 
 const PostPut = ({
   page,
@@ -41,7 +42,13 @@ const PostPut = ({
   const imagePreview = watch("imagePreview");
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+    <form
+      onSubmit={async () => {
+        await handleSubmit(onSubmit);
+        toast.success("tilføjet");
+      }}
+      className={styles.form}
+    >
       <h1>
         {addEdit} {page}
       </h1>

@@ -1,6 +1,19 @@
 .content {
   background-color: rgba(51, 98, 108, 1);
 }
+
+.errorsplace {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  p {
+    color: orangered;
+  }
+}
+
 .header {
   position: relative;
   height: 100vh;

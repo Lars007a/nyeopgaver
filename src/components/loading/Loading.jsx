@@ -1,13 +1,8 @@
 import styles from "./loading.module.css";
+import { ClipLoader } from "react-spinners";
 
 const Loading = () => {
-  return (
-    <div className={styles.loader}>
-      <span className={styles.bar}></span>
-      <span className={styles.bar}></span>
-      <span className={styles.bar}></span>
-    </div>
-  );
+  return <ClipLoader color="#36d7b7" loading={true} size={40} />;
 };
 
 export default Loading;

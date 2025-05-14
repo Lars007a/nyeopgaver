@@ -6,6 +6,9 @@ import { useFetchReviews } from "../../hooks/useFetchReviewV2";
 import { useFetchStays } from "../../hooks/useFetchStay";
 import PostPut from "../../components/backoffice/postPut/postPut";
 import GetDelete from "../../components/backoffice/getDelete/getDelete";
+import LoginCard from "../../components/loginCard/loginCard";
+import { toast } from "react-toastify";
+import { ClipLoader } from "react-spinners";
 
 const Backoffice = () => {
   const {
@@ -204,7 +207,7 @@ const Backoffice = () => {
   }, [productID, isEditing, setValue, activities, reviews, stays, firstLoad]);
 
   if (activityIsLoading || reviewIsLoading || stayIsLoading)
-    return <p>Indlæser produkter...</p>;
+    return <ClipLoader size={40} loading={true} color="#36d7b7" />;
   if (activityError || reviewError || stayError) return <p>Fejl: {error}</p>;
 
   const onSubmit = async (data) => {
@@ -281,7 +284,7 @@ const Backoffice = () => {
         <li onClick={() => onPageChange("Udtaleser")}>udtaleser</li>
         <li onClick={() => onPageChange("Ophold")}>ophold</li>
       </ul>
-
+      <LoginCard />
       <div className={styles.container}>
         <GetDelete
           page={add}

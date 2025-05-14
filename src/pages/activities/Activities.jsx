@@ -22,7 +22,7 @@ const Activites = () => {
           vil vi hos Gittes Glamping imødekomme dine ønsker.
         </p>
       </section>
-      <ActivityMap/>
+      <ActivityMap />
     </>
   );
 };

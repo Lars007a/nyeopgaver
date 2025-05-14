@@ -1,6 +1,7 @@
 import Statements from "../../components/statements/statements.jsx";
 import styles from "./statementsSection.module.css";
 import { useFetchReviews } from "../../hooks/useFetchReviewV2.jsx";
+import { ClipLoader } from "react-spinners";
 
 const statementsSection = () => {
   const revs = useFetchReviews(); //Får ikke alle ting til reviews, mangler titlen til reviewet.
@@ -12,9 +13,7 @@ const statementsSection = () => {
 
       <div className={styles.output}>
         {revs.loading && (
-          <div className={styles.msg}>
-            <h3>Indlæser udtalelser...</h3>
-          </div>
+          <ClipLoader color="#36d7b7" loading={revs.loading} size={40} />
         )}
 
         {revs.error && (

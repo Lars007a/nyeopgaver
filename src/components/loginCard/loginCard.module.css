@@ -1,0 +1,60 @@
+.box {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(130, 155, 151, 1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 20px auto 30px auto;
+
+  .introtext {
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+
+  strong {
+    color: white;
+    font-weight: 500;
+  }
+  .signoutBtn {
+    padding: 8px 0px;
+    font-size: 18px;
+    background-color: rgba(51, 98, 108, 1);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: background-color 0.2s;
+    border-radius: 8px;
+  }
+
+  .signoutBtn:hover {
+    background-color: rgb(38, 76, 84);
+  }
+
+  img {
+    border-radius: 060504px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .box {
+    width: 90%;
+  }
+}

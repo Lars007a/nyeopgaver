@@ -3,6 +3,7 @@ import styles from "./stay.module.css";
 import heroImg from "../../assets/hero/hero_01.jpg";
 import { useFetchStays } from "../../hooks/useFetchStay";
 import StayCard from "../../components/stayCard/StayCard";
+import { ClipLoader } from "react-spinners";
 
 const Stay = () => {
   const { stays, isLoading, error } = useFetchStays();
@@ -32,7 +33,9 @@ const Stay = () => {
       </section>
 
       <section className={styles.stayCardContainer}>
-        {isLoading && <p>Indlæser ophold...</p>}
+        {isLoading && (
+          <ClipLoader color="#36d7b7" loading={isLoading} size={40} />
+        )}
         {error && <p>{error}</p>}
         {stays.map((stay) => (
           <StayCard key={stay._id} stay={stay} />

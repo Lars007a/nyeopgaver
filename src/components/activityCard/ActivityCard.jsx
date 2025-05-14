@@ -7,6 +7,7 @@ import vinImg from "../../assets/activities/vinsmagning.jpg";
 import yogaImg from "../../assets/activities/yoga.jpg";
 import { IoIosArrowDown, IoIosArrowUp, IoIosHeart } from "react-icons/io";
 import { IoHeartDislikeOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 import { useLocalStorage } from "@uidotdev/usehooks";
 
@@ -17,6 +18,8 @@ const ActivityCard = ({ activity }) => {
   const isLiked = myList.includes(activity._id);
 
   const handleLike = () => {
+    toast.success("Success!");
+
     setMyList((prevList) =>
       isLiked
         ? prevList.filter((id) => id !== activity._id)

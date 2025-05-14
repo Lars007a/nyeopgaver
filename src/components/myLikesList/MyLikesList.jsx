@@ -1,9 +1,10 @@
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import ActivityCard from "../activityCard/ActivityCard";
+import { ClipLoader } from "react-spinners";
 
 const MyLikesList = () => {
-  const [myList] = useLocalStorage("myList", []); 
+  const [myList] = useLocalStorage("myList", []);
   const [activities, setActivites] = useState([]);
   const [error, setError] = useState(null);
 
